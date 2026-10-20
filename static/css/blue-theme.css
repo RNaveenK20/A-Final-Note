@@ -1,0 +1,66 @@
+/* Calm blue farewell palette: misty, reflective, and warm rather than corporate. */
+:root{--ink:#1f2d43;--plum:#29486d;--wine:#4777a7;--rose:#8eb9d5;--blush:#dcecf5;--cream:#f5f9fc;--gold:#c9a55c;--muted:#617083;--line:rgba(41,72,109,.16);--shadow:0 20px 45px rgba(35,67,104,.12)}
+.nav{background:linear-gradient(to bottom,rgba(245,249,252,.95),rgba(245,249,252,.65),transparent)}
+.hero{background:radial-gradient(circle at 78% 28%,#d7eaf5 0,transparent 19rem),radial-gradient(circle at 85% 70%,#e8edf5 0,transparent 17rem),linear-gradient(120deg,#f5f9fc 0%,#fbfdff 50%,#e4f0f7 100%)}
+.hero-orb{border-color:rgba(71,119,167,.16)}.button:hover{box-shadow:0 12px 25px rgba(41,72,109,.25)}
+.journey,.mates{background:#fbfdff}.timeline b{background:#fbfdff}.meaning .eyebrow,.goodbye .eyebrow{color:#b9d8eb}.meaning blockquote em,.goodbye em,.signature strong{color:#e8c983}.meaning-copy{color:#dce9f2}
+.memories{background:linear-gradient(180deg,#e7f2f8,#f5f9fc)}.memory-grid article{box-shadow:0 9px 30px rgba(41,72,109,.06)}
+.mate-card{background:linear-gradient(145deg,#fff,#e6f1f7);box-shadow:0 9px 22px rgba(41,72,109,.08)}.mate-card:hover,.mate-card:focus-visible{background:linear-gradient(145deg,#fff,#cfe5f2)}
+.thanks{background:radial-gradient(circle,#dcecf5 0,transparent 27rem),var(--cream)}.goodbye{background:#1d324d}.goodbye>p:not(.eyebrow){color:#d8e4ee}footer{background:#14243a;color:#bdd0df}.modal-backdrop{background:rgba(20,36,58,.72)}.modal{background:#fbfdff}
+
+/* Mate cards arrive softly, then lift and glow when opened. */
+.mate-card{position:relative;overflow:hidden;animation:card-arrival .65s cubic-bezier(.2,.75,.3,1) both}
+.mate-card:nth-child(2){animation-delay:.1s}.mate-card:nth-child(3){animation-delay:.2s}.mate-card:nth-child(4){animation-delay:.3s}.mate-card:nth-child(5){animation-delay:.4s}
+.mate-card::after{content:"";position:absolute;inset:-45%;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.78) 50%,transparent 58%);transform:translateX(-100%) rotate(8deg);transition:transform .7s ease;pointer-events:none}
+.mate-card:hover::after,.mate-card:focus-visible::after{transform:translateX(100%) rotate(8deg)}
+.mate-card:hover,.mate-card:focus-visible{transform:translateY(-8px) scale(1.015);box-shadow:0 22px 35px rgba(41,72,109,.18)}
+.mate-card:active{transform:translateY(-2px) scale(.985)}
+.modal{animation:modal-open .32s cubic-bezier(.2,.8,.25,1)}
+@keyframes card-arrival{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes modal-open{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media (prefers-reduced-motion:reduce){.mate-card,.modal{animation:none}.mate-card::after{display:none}.mate-card:hover,.mate-card:focus-visible,.mate-card:active{transform:none}}
+
+/* Midnight version: a warm, calm dark canvas for the full farewell journey. */
+:root{--ink:#edf5fb;--plum:#80b4d9;--wine:#9bc8e6;--rose:#78aeca;--blush:#1d3a54;--cream:#0d1c2d;--gold:#e4c077;--muted:#afc4d4;--line:rgba(159,204,233,.2);--shadow:0 24px 50px rgba(0,0,0,.3)}
+body{background:#0d1c2d;color:var(--ink)}
+.nav{background:linear-gradient(to bottom,rgba(13,28,45,.96),rgba(13,28,45,.68),transparent)}
+.hero{background:radial-gradient(circle at 78% 28%,#234967 0,transparent 19rem),radial-gradient(circle at 85% 70%,#1d3858 0,transparent 17rem),linear-gradient(120deg,#0d1c2d 0%,#10263a 52%,#152d46 100%)}
+.hero-orb{border-color:rgba(144,194,225,.22)}.brand{color:#fff}.nav nav a{color:#b7cada}.nav nav a:hover{color:#fff}
+.journey,.mates{background:#102338}.timeline b{background:#102338}.timeline h3,.memory-grid h3{color:#d5eafb}
+.meaning{background:#193b59}.memories{background:linear-gradient(180deg,#162f47,#0d1c2d)}
+.memory-grid article{background:rgba(31,62,88,.62);border-color:rgba(155,200,230,.12)}.memory-grid article:hover{background:#234863}
+.mate-card{background:linear-gradient(145deg,#1b3d59,#142d46);border-color:rgba(157,203,232,.23);color:#e4f2fb}.mate-card:hover,.mate-card:focus-visible{background:linear-gradient(145deg,#285777,#193d59)}
+.thanks{background:radial-gradient(circle,#193d5a 0,transparent 27rem),#0e2033}.goodbye{background:#091624}.modal{background:#112941;color:var(--ink)}input,textarea{background:#0c2034;color:#edf5fb;border-color:rgba(155,200,230,.28)}.comment{border-color:var(--line)}
+
+/* Restore the bright farewell canvas while retaining the blue accent system. */
+:root{--ink:#1f2d43;--plum:#29486d;--wine:#4777a7;--rose:#8eb9d5;--blush:#dcecf5;--cream:#f5f9fc;--gold:#c9a55c;--muted:#617083;--line:rgba(41,72,109,.16);--shadow:0 20px 45px rgba(35,67,104,.12)}
+body{background:var(--cream);color:var(--ink)}.nav{background:linear-gradient(to bottom,rgba(245,249,252,.95),rgba(245,249,252,.65),transparent)}.brand{color:var(--ink)}.nav nav a{color:var(--muted)}.nav nav a:hover{color:var(--plum)}
+.hero{background:radial-gradient(circle at 78% 28%,#d7eaf5 0,transparent 19rem),radial-gradient(circle at 85% 70%,#e8edf5 0,transparent 17rem),linear-gradient(120deg,#f5f9fc 0%,#fbfdff 50%,#e4f0f7 100%)}.hero-orb{border-color:rgba(71,119,167,.16)}
+.journey,.mates{background:#fbfdff}.timeline b{background:#fbfdff}.timeline h3,.memory-grid h3{color:var(--plum)}.meaning{background:var(--plum)}.memories{background:linear-gradient(180deg,#e7f2f8,#f5f9fc)}
+.memory-grid article{background:rgba(255,255,255,.62);border-color:rgba(255,255,255,.8)}.memory-grid article:hover{background:#fff}.mate-card{background:linear-gradient(145deg,#fff,#e6f1f7);border-color:var(--line);color:var(--plum)}.mate-card:hover,.mate-card:focus-visible{background:linear-gradient(145deg,#fff,#cfe5f2)}
+.thanks{background:radial-gradient(circle,#dcecf5 0,transparent 27rem),var(--cream)}.goodbye{background:#1d324d}.modal{background:#fbfdff;color:var(--ink)}input,textarea{background:#fff;color:var(--ink);border-color:var(--line)}
+
+/* Higher-contrast interaction state for the white page background. */
+.mate-card{border-color:rgba(41,72,109,.28);box-shadow:0 10px 24px rgba(28,61,96,.12)}
+.mate-card::after{background:linear-gradient(115deg,transparent 39%,rgba(101,160,201,.34) 50%,transparent 61%)}
+.mate-card:hover,.mate-card:focus-visible{color:#173a60;border-color:#3d719b;background:linear-gradient(145deg,#fafdff,#c8e3f2);box-shadow:0 24px 42px rgba(18,54,89,.28)}
+.mate-card:active{box-shadow:0 10px 22px rgba(18,54,89,.22)}
+
+/* A warmer, more ceremonial farewell finish. */
+body{background:#f8fbfd;background-image:linear-gradient(rgba(255,255,255,.62),rgba(255,255,255,.62)),radial-gradient(circle at 10% 15%,rgba(224,190,128,.11),transparent 20rem)}
+h1,h2,blockquote{letter-spacing:-.035em}.hero{isolation:isolate;padding-bottom:10rem}.hero::before{content:"";position:absolute;width:19rem;height:19rem;right:10%;top:20%;border:1px solid rgba(201,165,92,.5);border-radius:50%;box-shadow:0 0 0 16px rgba(201,165,92,.07),0 0 0 34px rgba(71,119,167,.05);z-index:0}.hero::after{content:"✦";position:absolute;right:19%;top:28%;font-size:2rem;color:var(--gold);opacity:.85;z-index:0}
+.eyebrow{display:flex;align-items:center;gap:.75rem}.eyebrow::before{content:"";width:1.7rem;height:1px;background:currentColor;opacity:.65}.centered .eyebrow{justify-content:center}.centered .eyebrow::after{content:"";width:1.7rem;height:1px;background:currentColor;opacity:.65}
+.section-intro h2{margin-bottom:1.35rem}.journey{position:relative}.journey::after{content:"";position:absolute;right:8%;bottom:8%;width:6rem;height:6rem;border:1px solid rgba(201,165,92,.34);border-radius:50%;pointer-events:none}.meaning{background:linear-gradient(135deg,#29486d,#335d85 60%,#29486d)}.meaning blockquote::before{content:"“";display:block;color:var(--gold);font-size:3.5rem;height:1.6rem;font-style:normal}.meaning blockquote::after{content:"";display:block;width:4rem;height:1px;margin:2rem auto 0;background:var(--gold);opacity:.75}
+.memory-grid article{border-radius:22px}.memory-grid article:first-child,.memory-grid article:nth-child(5){background:linear-gradient(145deg,#fffdf9,#eaf5fa)}.mates{background:linear-gradient(180deg,#fbfdff,#f5f9fc)}.mates .section-intro{margin-bottom:4rem}.mate-card{border-radius:22px;min-height:205px}.thanks{position:relative;overflow:hidden}.thanks::before,.thanks::after{content:"✦";position:absolute;color:var(--gold);opacity:.65;font-size:1.3rem}.thanks::before{left:20%;top:28%}.thanks::after{right:20%;bottom:28%}.goodbye{background:radial-gradient(circle at 50% 0,#426e97 0,transparent 25rem),#1d324d}.signature{position:relative;display:inline-block}.signature::before{content:"";position:absolute;left:50%;top:-1.5rem;width:2.2rem;height:1px;background:var(--gold);transform:translateX(-50%)}
+@media(max-width:760px){.hero::before{width:13rem;height:13rem;right:-3rem;top:16%}.hero::after{right:13%;top:25%}.journey::after{display:none}.thanks::before{left:8%}.thanks::after{right:8%}}
+
+/* Opening sequence: a quiet final-page turn before the farewell note appears. */
+body::after{content:"";position:fixed;z-index:100;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(245,250,253,.92) 0 12%,rgba(208,230,243,.86) 42%,#29486d 100%);animation:farewell-curtain .72s cubic-bezier(.65,0,.25,1) forwards}
+.nav{animation:soft-reveal .42s .18s both}.hero .eyebrow{animation:soft-reveal .4s .25s both}.hero h1{animation:farewell-title .6s .31s cubic-bezier(.2,.8,.25,1) both}.hero-copy{animation:soft-reveal .45s .45s both}.hero .button{animation:soft-reveal .42s .53s both}.scroll-cue{animation:soft-reveal .42s .6s both}
+@keyframes farewell-curtain{0%{opacity:1;transform:scale(1)}65%{opacity:1;transform:scale(1.04)}100%{opacity:0;visibility:hidden;transform:scale(1.08)}}
+@keyframes soft-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes farewell-title{from{opacity:0;letter-spacing:.02em;transform:translateY(22px);filter:blur(5px)}to{opacity:1;letter-spacing:-.035em;transform:translateY(0);filter:blur(0)}}
+@media (prefers-reduced-motion:reduce){body::after{display:none}.nav,.hero .eyebrow,.hero h1,.hero-copy,.hero .button,.scroll-cue{animation:none}}
+
+/* Load normally: reserve motion for deliberate card and modal interactions. */
+body::after{display:none}.nav,.hero .eyebrow,.hero h1,.hero-copy,.hero .button,.scroll-cue{animation:none}
