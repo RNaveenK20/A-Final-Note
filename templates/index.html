@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A farewell note for the people who made the journey meaningful.">
+  <title>With Gratitude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/blue-theme.css') }}">
+</head>
+<body>
+  <header class="nav"><a class="brand" href="#home">With Gratitude<span>.</span></a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#journey">Journey</a><a href="#memories">Memories</a><a href="#mates">To My Mates</a><a href="#thanks">Thank You</a></nav></header>
+  <main>
+    <section class="hero" id="home"><div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><p class="eyebrow">A farewell note</p><h1>One Chapter Ends,<br><em>Another Begins</em></h1><p class="hero-copy">To the people who made this journey special...</p><a class="button" href="#journey">Begin the Journey <span>↓</span></a><a class="scroll-cue" href="#journey" aria-label="Scroll to journey">scroll to wander <i></i></a></section>
+    <section class="section journey" id="journey"><div class="section-intro"><p class="eyebrow">The story so far</p><h2>My journey,<br><em>made better together.</em></h2><p>From tentative first steps to the work and laughter that filled every day, this chapter was shaped by much more than the milestones.</p></div><ol class="timeline"><li><b>01</b><div><h3>The Beginning</h3><p>A fresh desk, unfamiliar faces and the start of something meaningful.</p></div></li><li><b>02</b><div><h3>First Challenges</h3><p>Finding our rhythm, one question, deadline and small win at a time.</p></div></li><li><b>03</b><div><h3>Learning & Growth</h3><p>Lessons that will travel far beyond these office walls.</p></div></li><li><b>04</b><div><h3>Memorable Projects</h3><p>Work we can look back on with a quiet sense of pride.</p></div></li><li><b>05</b><div><h3>The People</h3><p>The real reason this chapter will always stay close.</p></div></li><li><b>06</b><div><h3>The Final Chapter</h3><p>Not an ending—just a grateful turning of the page.</p></div></li></ol></section>
+    <section class="meaning section"><p class="eyebrow">What this journey meant</p><blockquote>“It was never just the work.<br>It was the people who made it <em>matter.</em>”</blockquote><p class="meaning-copy">I leave with stronger skills, warmer stories and a great deal of gratitude for every person who shared this season with me.</p></section>
+    <section class="section memories" id="memories"><div class="section-intro"><p class="eyebrow">The little things</p><h2>Memories in the<br><em>in-between moments.</em></h2></div><div class="memory-grid"><article>☕<h3>Lunch and Coffee breaks</h3><p>Endless laughter and sharing lunch, coffee breaks and the best ideas for bug fix and development often began away from the desk.</p></article><article>✦<h3>Team discussions</h3><p>Different viewpoints, one shared purpose.</p></article><article>♡<h3>Celebrations</h3><p>Making room for wins—large, small and everything between.</p></article><article>↗<h3>Deadlines</h3><p>Proof that we could turn the pressure into progress especially on demo times.</p></article><article>☼<h3>Laughter</h3><p>The kind that made even busy days feel lighter.</p></article><article>∞<h3>Random conversations</h3><p>Some memories were planned. Most of the best ones weren't.</p></article></div></section>
+    <section class="mates section" id="mates"><div class="section-intro centered"><p class="eyebrow">For my people</p><h2>To My <em>Mates</em></h2><p>Every person I met here became a part of my journey.</p></div><div class="mate-grid" id="mateGrid" aria-live="polite"></div></section>
+    <section class="thanks" id="thanks"><p class="eyebrow">From the heart</p><h2>Thank <em>You.</em></h2><p>Thank you for the support, guidance, laughter, challenges and countless memories.</p></section>
+    <section class="goodbye"><p class="eyebrow">Until we meet again</p><h2>Goodbye, <em>For Now.</em></h2><p>Leaving the office doesn't mean leaving the memories behind.</p><p class="signature">With gratitude,<br><strong>Naveen Kumar R</strong></p></section>
+  </main>
+  <footer>Made with gratitude and a lot of memories. <span>© <span id="year"></span></span></footer>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName"><button class="close" id="closeModal" aria-label="Close farewell message">×</button><p class="eyebrow">A note for</p><h2 id="modalName"></h2><p id="modalMessage" class="modal-message"></p><div class="like-row"><span id="likeCount">♡ 0 Likes</span><button class="like-button" id="likeButton">♡ Like</button></div><hr><form id="commentForm"><h3>Leave a Message</h3><label>Your Name<input id="commenterName" maxlength="100" required autocomplete="name"></label><label>Your Message<textarea id="commentText" maxlength="500" required></textarea><small id="counter">0 / 500</small></label><button class="button submit" type="submit">Submit Comment</button><p class="form-status" id="formStatus" aria-live="polite"></p></form><div class="comments"><h3>Previous Messages</h3><div id="commentList"></div></div></section></div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
